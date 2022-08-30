@@ -1,12 +1,11 @@
 ---
-banner: "/img/banner.jpg"
+banner: "assets/images/banner.jpg"
 banner_title: "Créez simplement votre site Hugo étape par étape !"
-menu: 
-    main: 
-     name: "Accueil"
+menu:
+  main:
+    name: "Accueil"
 weight: 1
 ---
-
 
 ## Contra vagos
 
