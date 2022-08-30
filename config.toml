@@ -1,0 +1,9 @@
+baseURL = '/'
+languageCode = 'fr'
+title = 'Oppoxa'
+paginate = 2
+
+[params]
+    linkedin = "https://www.linkedin.com/in/val-brochard-5897b9151/"
+    website = "https://oppoxa.com"
+    author = "val brochard"
