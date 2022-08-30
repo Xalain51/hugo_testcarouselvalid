@@ -1,6 +1,6 @@
 ---
-title: 'About'
-image: img/about.jpeg
+title: "About"
+image: assets/images/about.jpeg
 menu:
   main:
     name: "About"
@@ -9,7 +9,6 @@ menu:
     name: "About"
     weight: 1
 ---
-
 
 ## Contra vagos
 

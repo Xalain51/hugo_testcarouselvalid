@@ -1,6 +1,15 @@
-<div class="col-lg-4">
+<div class="reverse">
+  <div class="annonces">test pour voir1</div>
+  <div class="annonces">test pour voir2</div>
+</div>
+
+<div class="col-lg-4 reverse">
   <div class="card">
-    <img src="{{.Params.Image}}" class="card-img-top" alt="..." />
+    <img
+      src="{{.Params.Image}}"
+      class="card-img-top"
+      alt="impossible de lire l'image"
+    />
     <div class="card-body">
       <h5 class="card-title">{{.Title}}</h5>
       <p class="card-text text-truncate">{{.Description}}</p>
@@ -8,3 +17,4 @@
     </div>
   </div>
 </div>
+{{/* {{ if eq .Params.Direction "gauche"}} {{ end }} */}}
