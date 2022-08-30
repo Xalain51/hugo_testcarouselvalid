@@ -1,24 +1,25 @@
-{{define "main"}}
-{{if .Params.img}}
-<div id="banner" class="cover text-center" style="background-image: url({{.Params.img}})">
-    <h1>Taking control of your daily life is easy <br> when you know how!</h1>
+{{define "main"}} {{if .Params.banner}}
+<div
+  id="banner"
+  class="cover text-center"
+  style="background-image: url('{{.Params.Banner}}')"
+>
+  <h1>
+    Taking control of your daily life is easy <br />
+    when you know how!
+  </h1>
 </div>
 {{end}}
 <main class="container">
+  <div class="my-5">{{.Content}}</div>
 
-    <div class="my-5">
-        {{.Content}}
+  <h2 class="my-5">Articles récents</h2>
+  <section id="articles" class="row g-5">
+    {{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts") }} {{
+    range $paginator.Pages }} {{ .Render "summary" }} {{ end }}
+    <div class="text-center my-5">
+      <a href="/posts" class="btn btn-primary">Voir tous les posts</a>
     </div>
-
-    <h2 class="my-5">Articles récents</h2>
-    <section id="articles" class="row g-5">
-        {{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts") }}
-        {{ range $paginator.Pages }}
-        {{ .Render "summary" }}
-        {{ end }}
-        <div class="text-center my-5">
-            <a href="/posts" class="btn btn-primary">Voir tous les posts</a>
-        </div>
-    </section>
+  </section>
 </main>
 {{end}}
