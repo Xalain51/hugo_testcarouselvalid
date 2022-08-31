@@ -73,3 +73,27 @@ a.active{
     color: #45bdee !important;
     font-weight: 500;
 }
+.carousel {
+    border: 10px solid purple;
+}
+
+.carousel-item {
+    height: 80vh;
+    border: 4px solid red;
+}
+
+.carousel-inner {
+    border: 5px solid yellow;
+}
+
+.carousel-caption {
+    border: 5px solid blue;
+}
+
+.carousel-indicators {
+    border: 5px solid black;
+}
+
+.test {
+    border: 20px solid red;
+}
