@@ -78,8 +78,9 @@
     </div>
   </div>
 </div>
-{{/* {{ partial "carousel.html" (dict "context" . "items" "1" "height" "50"
-"unit" "%" "duration" "7000") }} */}}
+{{ with .Site.GetPage "/carousel" }} {{ with .GetPage "carousel.md" }}{{ .Title
+}}{{ end }} {{ end }} {{/* {{ partial "carousel.html" (dict "context" . "items"
+"1" "height" "50" "unit" "%" "duration" "7000") }} */}}
 <main class="container">
   <div class="my-5">{{.Content}}</div>
 
