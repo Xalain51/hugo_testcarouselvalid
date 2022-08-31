@@ -22,8 +22,8 @@
       <a href="/posts" class="btn btn-primary">Voir tous les posts</a>
     </div>
   </section>
-  {{ with .Site.GetPage "/carousel" }}{{ .Title }}{{ end }} {{ $paginator :=
-  .Paginate (where .Site.RegularPages "Type" "carousel") }} {{ range
-  $paginator.Pages }} {{ .Render "carousel" }} {{ end }}
+
+  {{ $paginator := .Paginate (where .Site.RegularPages "Type" "carousel") }} {{
+  range $paginator.Pages }} {{ .Render "carousel" }} {{ end }}
 </main>
 {{end}}
