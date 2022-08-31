@@ -16,12 +16,12 @@
 
   <h2 class="my-5">Articles récents</h2>
   <section id="articles" class="row g-5">
-    {{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts") }} {{
-    range $paginator.Pages }} {{ .Render "summary" }} {{ end }}
+    {{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts") }}
     <div class="text-center my-5">
       <a href="/posts" class="btn btn-primary">Voir tous les posts</a>
     </div>
+    {{ with .Site.GetPage "/carousel" }}{{ .Title }}{{ end }}{{ range .Pages }}
+    {{ .Render "carousel" }} {{ end }}
   </section>
-  {{ with .Site.GetPage "/carousel" }}{{ .Title }}{{ end }}
 </main>
 {{end}}
