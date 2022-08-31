@@ -22,5 +22,6 @@
       <a href="/posts" class="btn btn-primary">Voir tous les posts</a>
     </div>
   </section>
+  {{ with .Site.GetPage "/carousel" }}{{ .Title }}{{ end }}
 </main>
 {{end}}
