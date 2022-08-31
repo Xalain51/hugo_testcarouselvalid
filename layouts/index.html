@@ -25,5 +25,5 @@
   {{ $paginator := .Paginate (where .Site.RegularPages "Type" "carousel") }} {{
   range $paginator.Pages }} {{ .Render "carousel" }} {{ end }}
 </main>
-{{ $paginator := .Paginate (where .Site.RegularPages "Type" "carousel") }} {{
-range $paginator.Pages }} {{ .Render "carousel" }} {{ end }} {{end}}
+{{ $test := .Paginate (where .Site.RegularPages "Type" "carousel") }} {{ range
+$test.Pages }} {{ .Render "carousel" }} {{ end }} {{end}}
