@@ -9,8 +9,8 @@
     when you know how!
   </h1>
 </div>
-{{end}} {{ partial "carousel.html" (dict "context" . "items" "1" "height" "50"
-"unit" "%" "duration" "7000") }}
+{{end}} {{/* {{ partial "carousel.html" (dict "context" . "items" "1" "height"
+"50" "unit" "%" "duration" "7000") }} */}}
 <main class="container">
   <div class="my-5">{{.Content}}</div>
 
@@ -21,6 +21,10 @@
     <div class="text-center my-5">
       <a href="/posts" class="btn btn-primary">Voir tous les posts</a>
     </div>
+  </section>
+  <section id="test" class="row g-5">
+    {{ $paginator := .Paginate (where .Site.RegularPages "Type" "carousel") }}
+    {{ range $paginator.Pages }} {{ .Render "summaro" }} {{ end }}
   </section>
 </main>
 {{end}}

@@ -16,3 +16,14 @@ collections:
       - { label: "Featured Image", name: "image", widget: "image" }
       - { label: "Rating (scale of 1-5)", name: "rating", widget: "number" }
       - { label: "Body", name: "body", widget: "markdown" }
+  - name: "carousel"
+    label: "Carousel"
+    folder: "/content/carousel"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields: # The fields for each document, usually in front matter
+      - { label: "Image1", name: "image1", widget: "image" }
+      - { label: "Image2", name: "image2", widget: "image" }
+      - { label: "Image3", name: "image3", widget: "image" }
+      - { label: "Rating (scale of 1-5)", name: "rating", widget: "number" }
+      - { label: "Body", name: "body", widget: "markdown" }
