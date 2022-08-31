@@ -92,5 +92,4 @@
     </div>
   </section>
 </main>
-{{ $test := .Paginate (where .Site.RegularPages "Type" "carousel") }} {{ range
-$test.Pages }} {{ .Render "carousel" }} {{ end }} {{end}}
+{{ range .Pages }} {{ .Render "carousel" }} {{ end }} {{end}}
