@@ -27,7 +27,7 @@ collections:
       - { label: "Image3", name: "image3", widget: "image" }
   - name: "index"
     label: "index"
-    files: "_index.md"
+    folder: "/content/_index.md"
     create: true
     fields: # The fields for each document, usually in front matter
       - { label: "Title", name: "banner_title", widget: "string" }
