@@ -3,9 +3,9 @@
   {{ partial "head" . }}
   <body>
     <div id="wrapper">
-      {{ partial "header" . }}
+      {{ partial "header" . }}{{partial "carousel" }}
       <div id="main">{{ block "main" . }}{{ end }}</div>
-      {{partial "carousel" .}} {{ partial "footer" . }}
+      {{ partial "footer" . }}
     </div>
   </body>
   {{partial "script" .}}
