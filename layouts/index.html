@@ -22,9 +22,5 @@
       <a href="/posts" class="btn btn-primary">Voir tous les posts</a>
     </div>
   </section>
-  <section id="test" class="row g-5">
-    {{ $paginator := .Paginate (where .Site.RegularPages "Type" "carousel") }}
-    {{ range $paginator.Pages }} {{ .Render "summaro" }} {{ end }}
-  </section>
 </main>
 {{end}}
